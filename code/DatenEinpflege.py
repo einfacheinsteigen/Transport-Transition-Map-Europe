@@ -25,7 +25,7 @@ def create_master_boundary_geojson(master_boundary_geojson_filepath):
         return
 
     # Save the GeoDataFrame as a .js file with "var test =" added at the beginning
-    js_output_filepath = os.path.join("layers", "masterBoundary_1.js")
+    js_output_filepath = os.path.join("../", "masterBoundary_1.js")
     try:
         with open(master_boundary_geojson_filepath, 'r') as geojson_file:
             geojson_data = geojson_file.read()
@@ -69,7 +69,7 @@ def append_to_master_boundary_geojson(requested_city_boundary_gdf, master_bounda
     master_boundary_gdf.to_file(master_boundary_geojson_filepath, driver='GeoJSON')
 
     # Save the GeoDataFrame as a .js file with "var test =" added at the beginning
-    js_output_filepath = os.path.join("../layers", "masterBoundary_1.js")
+    js_output_filepath = os.path.join("../", "masterBoundary_1.js")
     with open(js_output_filepath, 'w') as js_file:
         js_file.write('var json_masterBoundary_1 =')
         js_file.write(master_boundary_gdf.to_json())
@@ -147,7 +147,7 @@ def download_requested_city(place_name, master_boundary_geojson_filepath):
 
 if __name__ == "__main__":
     place_name = input("Please enter the name of the city: ")
-    master_boundary_geojson_filepath = os.path.join("../layers", "masterBoundary.geojson")
+    master_boundary_geojson_filepath = os.path.join("../", "masterBoundary.geojson")
 
     # Create the master GeoJSON file if it doesn't exist
     if not os.path.exists(master_boundary_geojson_filepath):

@@ -3,7 +3,7 @@ from shapely.geometry import shape
 
 def polygoneFiltern():
     # Einlesen der GeoJSON-Datei
-    input_geojson = '../layers/masterBoundary.geojson'
+    input_geojson = '../masterBoundary.geojson'
     with open(input_geojson, encoding='utf-8') as f:
         data = json.load(f)
 
@@ -30,7 +30,7 @@ def polygoneFiltern():
         json.dump(data, f, ensure_ascii=False)
 
     # Speichern der GeoJSON-Datei als .js-Datei
-    output_js = '../layers/masterBoundary_1.js'
+    output_js = '../masterBoundary_1.js'
     with open(output_js, 'w', encoding='utf-8') as f:
         f.write(f"const masterBoundaryData = {json.dumps(data)};")
 

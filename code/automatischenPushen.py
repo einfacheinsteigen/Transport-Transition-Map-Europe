@@ -2,7 +2,7 @@ import subprocess
 def git_push():
     try:
         # Führt git add -A aus, um alle Änderungen zu stagen
-        subprocess.run(["git", "add", "../layers/masterBoundary_1.js"])
+        subprocess.run(["git", "add", "../masterBoundary_1.js"])
 
 
         # Commitet die gestageten Änderungen
