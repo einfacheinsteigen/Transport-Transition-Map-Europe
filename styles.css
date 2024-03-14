@@ -1,0 +1,102 @@
+/* Stil für Popups */
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    bottom: 12px;
+    left: -150px;
+    min-width: 280px;
+    display: none;
+}
+
+.ol-popup-closer {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Allgemeine Stile */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff; /* Weißer Hintergrund */
+    overflow: hidden; /* Verhindert Scrollbalken */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Moderne Schriftart */
+}
+
+/* Kartencontainer */
+#map {
+    height: calc(100% - 50px); /* Abzug der Höhe der Leiste */
+    width: calc(100% - 400px); /* Abzug der Sidebar-Breite */
+    float: left;
+}
+
+/* Sidebar-Stile */
+#sidebar {
+    position: fixed;
+    top: 90px; /* Anpassung an die Höhe der Leiste */
+    right: 20px;
+    width: 400px;
+    height: calc(100% - 90px); /* Anpassung an die Höhe der Leiste */
+    background-color: #ffffff; /* Weißer Hintergrund */
+    border-left: 1px solid #ccc; /* Trennlinie zur Karte */
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px; /* Schriftgröße für die Sidebar */
+}
+
+#sidebar-header {
+    height: 50px; /* Höhe der Leiste */
+    text-align: center;
+    line-height: 50px; /* Vertikal zentrierte Überschrift */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+.menu-item {
+    margin-bottom: 10px; /* Abstand zwischen den Menüpunkten */
+}
+
+/* Dropdown-Menüs */
+label {
+    font-weight: bold; /* Fett anzeigen */
+    margin-bottom: 10px; /* Abstand nach unten */
+}
+
+/* Dropdown-Menü-Container */
+#menu {
+    padding: 20px; /* Innenabstand */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Dropdown-Menü-Optionen */
+select {
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Überschrift am oberen Rand */
+#title {
+    height: 50px; /* Höhe der Leiste */
+    line-height: 50px; /* Vertikal zentrierte Überschrift */
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px; /* Abstand nach oben */
+    margin-bottom: 20px; /* Abstand nach unten */
+    font-weight: bold;
+}
+
+#explanation {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 95%;
+    text-align: justify;
+}
